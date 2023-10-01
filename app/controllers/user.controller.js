@@ -106,5 +106,12 @@ const deletedUser = (req,res) => {
   })
 
 };
+const getAllUsers = (req,res)=>{
+  User.getAllRecords((err, data)=>{
+      if(err){
+          res.status(500).send({message: err.message || "Some error ocurred."});
+      }else res.send(data);
+  });
+};
 
-module.exports = { validUsername, createNewuser, login, updateUserCtrl,deletedUser };
+module.exports = { validUsername, createNewuser, login, updateUserCtrl,deletedUser ,getAllUsers};

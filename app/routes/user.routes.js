@@ -10,6 +10,7 @@ module.exports =(app)=>{
     router.post("/login", user_controller.login);
     router.put("/:id",authJwt,user_controller.updateUserCtrl);
     router.delete("/:id",authJwt,user_controller.deletedUser);
+    router.get("/", authJwt, user_controller.getAllUsers);
     
     // console.log("asdfasdf2222dasdadasdadasd");
 };
