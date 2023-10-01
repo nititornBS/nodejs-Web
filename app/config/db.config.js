@@ -1,6 +1,6 @@
 module.exports = {
-  HOST: "localhost",
-  USER: "root",
-  PASSWORD: "",
-  DB: "myapi",
+  HOST: "sql.freedb.tech",
+  USER: "freedb_TanaT",
+  PASSWORD: "w5mnzRbH#zwV6qZ",
+  DB: "freedb_manage_user",
 };
