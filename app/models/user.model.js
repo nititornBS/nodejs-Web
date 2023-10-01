@@ -144,4 +144,14 @@ User.removeUser = (id, result) => {
     result (null,{id: id});
   });
 };
+User.getAllRecords = (result)=>{
+  sql.query("SELECT * FROM users", (err, res)=>{
+      if(err){
+          console.log("Query err: " + err);
+          result(err,null);
+          return;
+      }
+      result(null, res);
+  });
+};
 module.exports = User;
